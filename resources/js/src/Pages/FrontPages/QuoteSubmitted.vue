@@ -1,8 +1,43 @@
 <template>
     <Frontend>
         <div class="min-h-screen bg-brand-sage-light">
+            <div class="hidden">
+                <title>Quote Submitted - Rhodes Coffee Co</title>
+                <meta
+                    name="description"
+                    content="Quote Submitted - Rhodes Coffee Co"
+                />
+            </div>
+
+            <!-- Title Section -->
+            <section
+                class="relative h-[40vh] min-h-[400px] flex items-center justify-center"
+            >
+                <!-- Background Image -->
+                <div class="absolute inset-0 z-0">
+                    <img
+                        :src="heroImage"
+                        alt="Coffee Cart Service Background"
+                        class="w-full h-full object-cover object-center brightness-[0.85]"
+                    />
+                    <div
+                        class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"
+                    ></div>
+                </div>
+
+                <!-- Title Content -->
+                <div class="relative z-10 text-center text-white px-4">
+                    <h1 class="text-5xl md:text-6xl font-serif mb-4">
+                        Thank You!
+                    </h1>
+                    <p class="text-xl md:text-2xl max-w-2xl mx-auto">
+                        We're excited to be part of your special event
+                    </p>
+                </div>
+            </section>
+
             <!-- Confirmation Content -->
-            <section class="py-24 px-4">
+            <section class="py-24 px-4 -mt-20">
                 <div
                     class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-12"
                 >
@@ -30,17 +65,17 @@
                     <!-- Image Gallery -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                         <img
-                            :src="'/storage/grid_gal1.jpeg'"
+                            :src="'/imgs/grid_gal1.jpeg'"
                             alt="Coffee Cart Setup"
                             class="w-full h-48 object-cover rounded-lg shadow-md"
                         />
                         <img
-                            :src="'/storage/grid_gal2.jpeg'"
+                            :src="'/imgs/grid_gal2.jpeg'"
                             alt="Coffee Service"
                             class="w-full h-48 object-cover rounded-lg shadow-md"
                         />
                         <img
-                            :src="'/storage/grid_gal3.jpeg'"
+                            :src="'/imgs/grid_gal3.jpeg'"
                             alt="Coffee Experience"
                             class="w-full h-48 object-cover rounded-lg shadow-md"
                         />
@@ -83,4 +118,7 @@
 import { Link } from "@inertiajs/vue3";
 import Frontend from "../../Layouts/Frontend.vue";
 import { CheckCircle, Coffee, Image } from "lucide-vue-next";
+
+// Import hero image
+const heroImage = "/imgs/about_img1.jpeg";
 </script>

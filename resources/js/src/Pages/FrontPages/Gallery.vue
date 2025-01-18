@@ -145,7 +145,7 @@ const galleryImages = [
             "Mobile Coffee Cart - Bringing the café experience to your location",
     },
     {
-        src: "imgs/grid_gal8.jpeg",
+        src: "imgs/grid_gal11.jpeg",
         alt: "Coffee Drinks Display",
         caption:
             "Signature Drinks - A variety of coffee options for every taste",

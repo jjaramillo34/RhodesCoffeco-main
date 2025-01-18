@@ -114,35 +114,35 @@ import { Link } from "@inertiajs/vue3";
 
 const galleryImages = [
     {
-        src: "../Imgs/grid_gal1.jpeg",
+        src: "imgs/grid_gal1.jpeg",
         alt: "Coffee Cart at Corporate Rooftop Event",
     },
     {
-        src: "../Imgs/grid_gal2.jpeg",
+        src: "imgs/grid_gal2.jpeg",
         alt: "Specialty Latte Art",
     },
     {
-        src: "../Imgs/grid_gal13.jpeg",
+        src: "imgs/grid_gal13.jpeg",
         alt: "Professional Espresso Machine",
     },
     {
-        src: "../Imgs/grid_gal4.jpeg",
+        src: "imgs/grid_gal4.jpeg",
         alt: "Coffee Cart Setup",
     },
     {
-        src: "../Imgs/grid_gal5.jpeg",
+        src: "imgs/grid_gal5.jpeg",
         alt: "Custom Ritz-Carlton Coffee Branding",
     },
     {
-        src: "../Imgs/grid_gal6.jpeg",
+        src: "imgs/grid_gal6.jpeg",
         alt: "Coffee Cart Equipment Details",
     },
     {
-        src: "../Imgs/grid_gal7.jpeg",
+        src: "imgs/grid_gal7.jpeg",
         alt: "Professional Coffee Service",
     },
     {
-        src: "../Imgs/grid_gal16.jpeg",
+        src: "imgs/grid_gal16.jpeg",
         alt: "Outdoor Coffee Cart Setup",
     },
 ];
