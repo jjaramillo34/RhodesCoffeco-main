@@ -59,12 +59,11 @@
                             <div
                                 class="flex items-start gap-4 mb-6 border-b border-gray-100 pb-4"
                             >
-                                <img
-                                    v-if="review.image"
-                                    :src="review.image"
-                                    :alt="'avatar of ' + review.name"
-                                    class="w-16 h-16 rounded-full object-cover"
-                                />
+                                <div
+                                    class="w-16 h-16 rounded-full bg-[#d69c46] flex items-center justify-center text-white text-2xl font-semibold"
+                                >
+                                    {{ review.initial }}
+                                </div>
                                 <div>
                                     <h3
                                         class="font-semibold text-lg text-gray-800"

@@ -77,91 +77,16 @@
                     Request an Event Quote
                 </h3>
 
-                <!-- Test Form (Development Only) -->
-                <div
-                    v-if="showTestForm"
-                    class="mb-8 p-4 bg-yellow-50 rounded-lg"
-                >
-                    <div class="flex justify-between items-center mb-4">
-                        <h4 class="font-semibold">Development Test Form</h4>
-                        <button
-                            @click="toggleForm"
-                            class="text-sm text-blue-600 hover:underline"
-                        >
-                            Switch to
-                            {{ showTestForm ? "17hats Form" : "Test Form" }}
-                        </button>
-                    </div>
-                    <form @submit.prevent="submitTestForm" class="space-y-4">
-                        <div>
-                            <label
-                                class="block text-sm font-medium text-gray-700 mb-1"
-                                >Name</label
-                            >
-                            <input
-                                v-model="testForm.name"
-                                type="text"
-                                class="w-full p-2 border rounded-md"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label
-                                class="block text-sm font-medium text-gray-700 mb-1"
-                                >Email</label
-                            >
-                            <input
-                                v-model="testForm.email"
-                                type="email"
-                                class="w-full p-2 border rounded-md"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label
-                                class="block text-sm font-medium text-gray-700 mb-1"
-                                >Event Date</label
-                            >
-                            <input
-                                v-model="testForm.eventDate"
-                                type="date"
-                                class="w-full p-2 border rounded-md"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label
-                                class="block text-sm font-medium text-gray-700 mb-1"
-                                >Message</label
-                            >
-                            <textarea
-                                v-model="testForm.message"
-                                class="w-full p-2 border rounded-md"
-                                rows="4"
-                                required
-                            ></textarea>
-                        </div>
-                        <button
-                            type="submit"
-                            class="w-full bg-[#d69c46] hover:bg-[#b48032] text-white py-3 rounded-md transition-colors"
-                        >
-                            Submit Test Form
-                        </button>
-                    </form>
-                </div>
-
                 <!-- 17hats Form -->
-                <div v-else>
-                    <iframe
-                        name="lc_contact_form"
-                        frameborder="0"
-                        width="100%"
-                        height="1200"
-                        src="https://rhodescoffeeco.17hats.com/p#/embed/hsffckwrrbbwhbnthxtzhgzgfsshwxgv"
-                        title="Contact form for event booking"
-                        class="w-full"
-                    ></iframe>
-                </div>
+                <iframe
+                    name="lc_contact_form"
+                    frameborder="0"
+                    width="100%"
+                    height="1200"
+                    src="https://rhodescoffeeco.17hats.com/p#/embed/hsffckwrrbbwhbnthxtzhgzgfsshwxgv"
+                    title="Contact form for event booking"
+                    class="w-full"
+                ></iframe>
             </div>
         </section>
 
@@ -186,36 +111,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { router } from "@inertiajs/vue3";
 import AdminLayout from "../../Layouts/Frontend.vue";
 import ParallaxSection from "../../Components/ParallaxSection.vue";
-import {
-    Mail,
-    Phone,
-    MapPin,
-    Instagram,
-    Facebook,
-    Clock,
-} from "lucide-vue-next";
-
-const showTestForm = ref(process.env.NODE_ENV === "development");
-const testForm = ref({
-    name: "",
-    email: "",
-    eventDate: "",
-    message: "",
-});
-
-const toggleForm = () => {
-    showTestForm.value = !showTestForm.value;
-};
-
-const submitTestForm = () => {
-    // Simulate form submission delay
-    setTimeout(() => {
-        // Redirect to quote submitted page
-        router.visit("/quote-submitted");
-    }, 500);
-};
+import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-vue-next";
 </script>
