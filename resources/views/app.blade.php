@@ -16,6 +16,9 @@
         {{-- Fontowesome --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
+        <!-- 17hats iframeSizer -->
+        <script src="https://rhodescoffeeco.17hats.com/vendor/iframeSizer.min.js"></script>
+
         <style>
             body{
                 font-family: "Poppins", sans-serif;
@@ -26,7 +29,6 @@
 
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
-        @vite('https://rhodescoffeeco.17hats.com/vendor/iframeSizer.min.js')
         @inertiaHead
     </head>
     <body class="antialiased">
